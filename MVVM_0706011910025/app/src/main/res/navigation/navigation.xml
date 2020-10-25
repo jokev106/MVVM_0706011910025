@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment2">
+
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.example.mvvm_0706011910025.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/actionMovieFragment"
+            app:destination="@id/nav_movie"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/splashFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_movie"
+        android:name="com.example.mvvm_0706011910025.ui.main.movie.MovieFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movie">
+        <action
+            android:id="@+id/actionDetailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.mvvm_0706011910025.ui.main.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_movieFragment22"
+            app:destination="@id/nav_movie" />
+        <argument
+            android:name="movie"
+            app:argType="com.example.mvvm_0706011910025.model.Movie"
+            app:nullable="true" />
+        <argument
+            android:name="tvShow"
+            app:argType="com.example.mvvm_0706011910025.model.TvShow"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_tv"
+        android:name="com.example.mvvm_0706011910025.ui.main.TvShow.TvShowFragment"
+        android:label="Tv Show"
+        tools:layout="@layout/fragment_tv_show">
+        <action
+            android:id="@+id/action_tvShowFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+</navigation>

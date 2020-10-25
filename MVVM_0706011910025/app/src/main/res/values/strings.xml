@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MVVM_0706011910025</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtTitle" />
+    <string name="txt_title">Title</string>
+    <string name="txt_genre">Genre</string>
+    <string name="txt_description">Description</string>
+</resources>
